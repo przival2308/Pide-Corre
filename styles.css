@@ -1,0 +1,220 @@
+body {
+  background: radial-gradient(circle at top, #1a1a1a, #0a0a0a);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  width: 200px;
+}
+
+/* TARJETAS */
+.menu-card {
+  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+  transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+.card-title {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.list-group-item {
+  background: transparent;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.list-group-item span {
+  color: #ff4d4d;
+  font-weight: 600;
+}
+
+/* IMÁGENES */
+.card-img-top {
+  height: 70px;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+/* MAPA */
+.map-container {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 5px 25px rgba(0,0,0,0.7);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* WHATSAPP */
+.whatsapp-panel {
+  background: linear-gradient(145deg, #111, #1a1a1a);
+  padding: 15px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.wa-card {
+  display: block;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(145deg, #1c1c1c, #111);
+  transition: 0.2s;
+}
+
+.wa-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(145deg, #1c1c1c, #111);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.2s;
+  font-weight: 500;
+}
+
+.wa-card img {
+  width: 28px;
+  height: 28px;
+}
+
+.wa-card span {
+  font-size: 0.95rem;
+}
+
+.wa-card:hover {
+  background: #25D366;
+  color: #000;
+  transform: translateX(6px);
+  box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* FOOTER */
+.social-footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-footer img {
+  width: 35px;
+  transition: 0.2s;
+}
+
+.social-footer img:hover {
+  transform: scale(1.2);
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .logo {
+    width: 90px;
+  }
+
+  .card-img-top {
+    height: 140px;
+  }
+
+  .map-container {
+    min-height: 300px;
+  }
+}
+
+
+/* ANIMACIÓN GENERAL */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.fade-in-delay2 {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* whatsapp flotante*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.whatsapp-float img {
+  width: 35px;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* header*/
+
+header {
+  background-image: url("img/Fondo.png"); /* tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.692); /* oscuridad */
+  z-index: 0;
+}
+
+header * {
+  position: relative;
+  z-index: 1;
+}
