@@ -246,3 +246,36 @@ html {
   height: 18px;
   background: rgba(255,255,255,0.3);
 }
+
+/*Flecha Flotante*/
+/* BOTON SUBIR */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: linear-gradient(145deg, #020202bb, #131212de);
+  color: #fff;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  z-index: 999;
+  transition: 0.2s;
+}
+
+/* hover */
+.scroll-top-btn:hover {
+  transform: scale(1.1);
+}
+
+/* SOLO CELULAR */
+@media (min-width: 768px) {
+  .scroll-top-btn {
+    display: none;
+  }
+}
